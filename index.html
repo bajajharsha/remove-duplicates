@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Remove Duplicate</title>
+</head>
+
+<body>
+    <!-- Create an application/program in any language with the following specifications:
+    1. It should have a textbox where user can enter the text
+    2. Create a placeholder/div where the output should be displayed.
+    3. Output : Remove all the duplicate characters from the text entered by the user in the textbox -->
+
+    <div class="container">
+        <input type="text" name="enter" id="inp">
+        <button onclick="removeDuplicates()">Remove Duplicate</button>
+        <div id="output"></div>
+    </div>
+    <script>
+        function removeDuplicates() {
+            var input = document.getElementById("inp").value;
+            var output = document.getElementById("output")
+
+            var inpArray = input.split("");
+            var uniqueArr = Array.from(new Set(inpArray))
+            var uniqueStr = uniqueArr.join("");
+            output.textContent = uniqueStr;
+        }
+
+    </script>
+</body>
+
+</html>
